@@ -1,0 +1,23 @@
+/* ********************** start sm ********************** */
+@media screen and (min-width: 640px) {
+    .btns {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .menu-links {
+        width: 350px;
+    }
+
+    .py-25-15,
+    .py-90-15,
+    .py-40-15 {
+        padding-inline: 5px;
+    }
+}
+
+/* ********************** end sm ********************** */
+/* ********************** start md ********************** */
+@media screen and (min-width: 768px) {}
+
+/* ********************** end md ********************** */
