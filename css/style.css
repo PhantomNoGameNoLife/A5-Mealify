@@ -11,6 +11,7 @@
     --color-secondary: #37373f;
     --links-color: #7f7f90;
     --color-tertiary: #7f7f90;
+    --color-detail:#7d7d7d;
     --border-color: #f1f1f1;
     --input-border: hsl( 0, 10%, 90%);
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -28,6 +29,8 @@
     --hover-color-primary: hsl(35, 72%, 49%);
     --color-secondary: #fff;
     --links-color: #bfbfc9;
+    --color-tertiary: #9f9f9f;
+    --color-detail:#adadad;
     --border-color: #333;
     --input-border: hsl( 0, 10%, 0%);
 }
@@ -157,8 +160,8 @@ h6 {
     padding: 40px 15px;
 }
 
-.mgt-90 {
-    margin-top: 90px;
+.mgt-85 {
+    margin-top: 85px;
 }
 
 /* ********************** end general css ********************** */
@@ -344,7 +347,6 @@ header img:hover {
     font-family: var(--font-primary);
     color: var(--color-default);
     font-size: 65px;
-    max-width: 350px;
 }
 
 .header-parent p {
@@ -569,7 +571,7 @@ header img:hover {
 }
 
 .contact-parent .details > div h3 {
-    color: var(--color-tertiary);
+    color: var(--color-detail);
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
@@ -687,6 +689,7 @@ footer .subscription-contect p {
 footer .sunscription-form {
     margin-block: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
 }
