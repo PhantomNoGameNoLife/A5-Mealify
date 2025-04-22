@@ -15,13 +15,230 @@
         padding-inline: 5px;
     }
 
-    footer .sunscription-form {
+    footer .subscription-form {
         flex-direction: row;
     }
 }
 
 /* ********************** end sm ********************** */
+
 /* ********************** start md ********************** */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .chefs-item {
+        width: calc(50% - 15px);
+    }
+
+    /* start masonry layout flexbox */
+    .gallery-parent {
+        height: 1405px;
+    }
+
+    .gallery-parent>div {
+        width: calc(50% - 10px);
+    }
+
+    .gallery-parent .pizza {
+        order: 1;
+    }
+
+    .gallery-parent .pizza-slices {
+        order: 3;
+    }
+
+    .gallery-parent .steak {
+        order: 5;
+    }
+
+    .gallery-parent .omelette {
+        order: 4;
+    }
+
+    .gallery-parent .burger {
+        order: 2;
+    }
+
+    .gallery-parent .fried {
+        order: 6;
+    }
+
+    .gallery-parent .kofta {
+        order: 7;
+    }
+
+    /* end masonry layout flexbox */
+
+    .contact-parent .details {
+        flex-flow: row wrap;
+    }
+
+    .contact-parent .details>div {
+        width: calc(50% - 7.5px);
+    }
+
+    footer .footer-parent {
+        flex-flow: row wrap;
+    }
+
+    footer .footer-parent>div:not(.subscription) {
+        width: calc(50% - 10px);
+    }
+
+    footer .subscription {
+        order: 1;
+    }
+}
 
 /* ********************** end md ********************** */
+
+/* ********************** start lg ********************** */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .header-parent {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+
+    .header-parent .content {
+        align-items: flex-start;
+    }
+
+    .header-parent>div {
+        width: 40%;
+    }
+
+    .btns a:first-child {
+        border-top-left-radius: 0%;
+    }
+
+    .chefs-item {
+        width: calc(100% / 3 - 20px);
+    }
+
+    .gallery-parent {
+        height: 845px;
+    }
+
+    .gallery-parent>div {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .gallery-parent .pizza-slices {
+        order: 2;
+    }
+
+    .gallery-parent .steak {
+        order: 3;
+    }
+
+    .gallery-parent .omelette {
+        order: 4;
+    }
+
+    .gallery-parent .burger {
+        order: 5;
+    }
+
+    .gallery-parent .fried {
+        order: 6;
+    }
+
+    .gallery-parent .kofta {
+        order: 7;
+    }
+
+    .contact-parent form div {
+        flex-direction: row;
+    }
+}
+
+/* ********************** end lg ********************** */
+
+/* ********************** start xl ********************** */
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-links {
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .menu-links .xmrk {
+        display: none;
+    }
+
+    .menu-links li a {
+        padding: 0;
+    }
+
+    .mode-icon {
+        margin: 0;
+    }
+
+    .menu-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-primary);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .menu-links a:hover::after {
+        width: 100%;
+    }
+
+    body:not(:has(:target)) a[href="#home"]::after,
+    body:not(:has(:target)) a[href="#home"],
+    body:has(.home:target) a[href="#home"]::after,
+    body:has(.home:target) a[href="#home"],
+    body:has(.chefs:target) a[href="#chefs"]::after,
+    body:has(.chefs:target) a[href="#chefs"],
+    body:has(.gallery:target) a[href="#gallery"]::after,
+    body:has(.gallery:target) a[href="#gallery"],
+    body:has(.contact:target) a[href="#contact"]::after,
+    body:has(.contact:target) a[href="#contact"] {
+        color: var(--default-color);
+        width: 100%;
+    }
+
+    .gallery-parent {
+        height: 1005px;
+    }
+
+    footer .footer-parent > div {
+        width: 25% !important;
+    }
+
+    footer .subscription {
+        order: 0;
+        flex-grow: 2;
+    }
+}
+/* ********************** end xl ********************** */
+
+/* ********************** start xxl ********************** */
+@media screen and (min-width: 1536px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+/* ********************** end xxl ********************** */

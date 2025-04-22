@@ -11,6 +11,7 @@
     --color-secondary: #37373f;
     --links-color: #7f7f90;
     --color-tertiary: #7f7f90;
+    --color-tertiary-2: #4f4f5a;;
     --color-detail:#7d7d7d;
     --border-color: #f1f1f1;
     --input-border: hsl( 0, 10%, 90%);
@@ -30,6 +31,7 @@
     --color-secondary: #fff;
     --links-color: #bfbfc9;
     --color-tertiary: #9f9f9f;
+    --color-tertiary-2: #9f9f9f;
     --color-detail:#adadad;
     --border-color: #333;
     --input-border: hsl( 0, 10%, 0%);
@@ -126,6 +128,7 @@ h6 {
 
 
 .container {
+    width: 100%;
     max-width: 540px;
     margin: 0 auto;
 }
@@ -181,6 +184,7 @@ nav {
 .navbar-parent {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-flow: row wrap;
 }
 
@@ -227,6 +231,7 @@ nav i {
     z-index: 999;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     box-shadow: 0px 0px 14px 0px #0000001b;
     transform: translateX(100%);
     transition: transform 400ms;
@@ -243,6 +248,10 @@ nav:has(.menu-links:target) {
 
 .menu-links i {
     font-size: 23px;
+}
+
+.menu-links a {
+    position: relative;
 }
 
 .menu-links a,
@@ -270,7 +279,7 @@ nav:has(.menu-links:target) {
 
 /* ********************** end navbar ********************** */
 
-/* ********************** start navbar ********************** */
+/* ********************** start header ********************** */
 
 header {
     background-color: var(--background-light-grey);
@@ -278,10 +287,11 @@ header {
 
 header img {
     filter: drop-shadow(4px 4px 9px #000a);
+    animation: shake 1s infinite paused;
 }
 
 header img:hover {
-    animation: shake 1s infinite;
+   animation-play-state: running;
 }
 
 @keyframes shake {
@@ -332,9 +342,15 @@ header img:hover {
 
 .header-parent {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 50px;
     text-align: center;
+}
+
+.header-parent > div {
+    width: 100%;
 }
 
 .header-parent .content {
@@ -352,7 +368,7 @@ header img:hover {
 .header-parent p {
     margin-block: 20px;
     line-height: 1.6;
-    color: #4f4f5a;
+    color: var(--color-tertiary-2);
 }
 
 .btns {
@@ -403,7 +419,7 @@ header img:hover {
     border-radius: 25px 0 0 25px;
 }
 
-/* ********************** end navbar ********************** */
+/* ********************** end header ********************** */
 
 /* ********************** start chefs ********************** */
 
@@ -421,6 +437,7 @@ header img:hover {
 .chefs-item {
     background-color: var(--background-light);
     border-radius: 8px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     transition: transform 400ms;
@@ -510,6 +527,10 @@ header img:hover {
     gap: 20px;
 }
 
+.gallery-parent > div {
+    width: 100%;
+}
+
 .gallery-parent img {
     transition: transform 400ms;
 }
@@ -558,7 +579,7 @@ header img:hover {
 .contact-parent .details {
     margin-block: 25px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
 }
 
@@ -593,7 +614,8 @@ header img:hover {
     font-size: 18px;
 }
 
-.contact-parent form {
+.contact-parent form,
+.contact-parent form div {
     background-color: var(--background-light);
     padding: 20px;
     display: flex;
@@ -601,6 +623,11 @@ header img:hover {
     align-items: center;
     box-shadow: 0 0 30px #00000014;
     gap: 15px;
+}
+
+.contact-parent form div {
+    width: 100%;
+    padding: 0;
 }
 
 .contact form :is(input, textarea) {
@@ -641,8 +668,12 @@ footer {
 
 footer .footer-parent {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
+}
+
+footer .footer-parent > div {
+    width: 100%;
 }
 
 footer .about div:first-child {
@@ -686,7 +717,7 @@ footer .subscription-contect p {
     margin-block: 10px;
 }
 
-footer .sunscription-form {
+footer .subscription-form {
     margin-block: 20px;
     display: flex;
     flex-direction: column;
@@ -694,12 +725,12 @@ footer .sunscription-form {
     gap: 10px;
 }
 
-footer .sunscription-form input {
+footer .subscription-form input {
     flex-grow: 1;
     padding: 10px;
 }
 
-footer .sunscription-form button {
+footer .subscription-form button {
     padding: 10px;
 }
 
