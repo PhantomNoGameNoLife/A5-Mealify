@@ -12,7 +12,7 @@
     .py-25-15,
     .py-90-15,
     .py-40-15 {
-        padding-inline: 5px;
+        padding-inline: .3125rem;
     }
 
     footer .subscription-form {
@@ -29,7 +29,7 @@
     }
 
     .chefs-item {
-        width: calc(50% - 15px);
+        width: calc(50% - .9375rem);
     }
 
     /* start masonry layout flexbox */
@@ -38,7 +38,7 @@
     }
 
     .gallery-parent>div {
-        width: calc(50% - 10px);
+        width: calc(50% - .625rem);
     }
 
     .gallery-parent .pizza {
@@ -76,7 +76,7 @@
     }
 
     .contact-parent .details>div {
-        width: calc(50% - 7.5px);
+        width: calc(50% - .4688rem);
     }
 
     footer .footer-parent {
@@ -84,7 +84,7 @@
     }
 
     footer .footer-parent>div:not(.subscription) {
-        width: calc(50% - 10px);
+        width: calc(50% - .625rem);
     }
 
     footer .subscription {
@@ -118,7 +118,7 @@
     }
 
     .chefs-item {
-        width: calc(100% / 3 - 20px);
+        width: calc(100% / 3 - 1.25rem);
     }
 
     .gallery-parent {
@@ -126,7 +126,7 @@
     }
 
     .gallery-parent>div {
-        width: calc(100% / 3 - 10px);
+        width: calc(100% / 3 - .625rem);
     }
 
     .gallery-parent .pizza-slices {

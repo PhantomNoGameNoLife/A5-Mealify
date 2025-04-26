@@ -11,10 +11,10 @@
     --color-secondary: #37373f;
     --links-color: #7f7f90;
     --color-tertiary: #7f7f90;
-    --color-tertiary-2: #4f4f5a;;
-    --color-detail:#7d7d7d;
+    --color-tertiary-2: #4f4f5a;
+    --color-detail: #7d7d7d;
     --border-color: #f1f1f1;
-    --input-border: hsl( 0, 10%, 90%);
+    --input-border: hsl(0, 10%, 90%);
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-primary: "Amatic SC", sans-serif;
     --font-secondary: "Inter", sans-serif;
@@ -32,15 +32,9 @@
     --links-color: #bfbfc9;
     --color-tertiary: #9f9f9f;
     --color-tertiary-2: #9f9f9f;
-    --color-detail:#adadad;
+    --color-detail: #adadad;
     --border-color: #333;
-    --input-border: hsl( 0, 10%, 0%);
-}
-
-body {
-    font-family: var(--font-default);
-    color: var(--color-default);
-    overflow-x: hidden;
+    --input-border: hsl(0, 10%, 0%);
 }
 
 :root:has(.mode:checked) body {
@@ -55,10 +49,16 @@ body {
     padding: 0;
 }
 
-html {
+html,
+body {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-default);
+    color: var(--color-default);
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -93,10 +93,6 @@ img {
     width: 100%;
 }
 
-body {
-    font-family: var(--font-default);
-}
-
 h1,
 h2,
 h3,
@@ -107,18 +103,18 @@ h6 {
 }
 
 .main-title {
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
     text-align: center;
 }
 
 .main-title h2 {
     color: var(--color-tertiary);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .main-title p {
-    font-size: 50px;
+    font-size: 3.125rem;
     font-family: var(--font-primary);
 }
 
@@ -134,7 +130,7 @@ h6 {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-family: var(--font-default);
 }
 
@@ -142,9 +138,13 @@ h6 {
     background-color: var(--color-primary);
     color: var(--background-light);
     border: 2px solid transparent;
-    font-size: 15px;
+    font-size: 0.9375rem;
     cursor: pointer;
     transition: background-color 400ms;
+    -webkit-transition: background-color 400ms;
+    -moz-transition: background-color 400ms;
+    -ms-transition: background-color 400ms;
+    -o-transition: background-color 400ms;
 }
 
 .btn-main:hover {
@@ -152,19 +152,19 @@ h6 {
 }
 
 .py-25-15 {
-    padding: 25px 15px;
+    padding: 1.5625rem 0.9375rem;
 }
 
 .py-90-15 {
-    padding: 90px 15px;
+    padding: 5.625rem 0.9375rem;
 }
 
 .py-40-15 {
-    padding: 40px 15px;
+    padding: 2.5rem 0.9375rem;
 }
 
 .mgt-85 {
-    margin-top: 85px;
+    margin-top: 5.3125rem;
 }
 
 /* ********************** end general css ********************** */
@@ -190,12 +190,12 @@ nav {
 
 nav i {
     color: var(--color-default);
-    font-size: 25px;
+    font-size: 1.5625rem;
     cursor: pointer;
 }
 
 .mode-icon {
-    margin: 0 20px 0 auto;
+    margin: 0 1.25rem 0 auto;
 }
 
 .logo a {
@@ -233,11 +233,23 @@ nav i {
     flex-direction: column;
     box-shadow: 0px 0px 14px 0px #0000001b;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transition: transform 400ms;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -ms-transition: transform 400ms;
+    -o-transition: transform 400ms;
 }
 
 .menu-links:target {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 
 nav:has(.menu-links:target) {
@@ -246,7 +258,7 @@ nav:has(.menu-links:target) {
 }
 
 .menu-links i {
-    font-size: 23px;
+    font-size: 1.4375rem;
 }
 
 .menu-links a {
@@ -258,6 +270,10 @@ nav:has(.menu-links:target) {
     color: var(--links-color);
     font-weight: 600;
     transition: color 400ms;
+    -webkit-transition: color 400ms;
+    -moz-transition: color 400ms;
+    -ms-transition: color 400ms;
+    -o-transition: color 400ms;
 }
 
 .menu-links a:hover,
@@ -266,13 +282,13 @@ nav:has(.menu-links:target) {
 }
 
 .menu-links .xmrk {
-    padding: 10px 15px 5px;
+    padding: 0.625rem 0.9375rem 0.3125rem;
     align-self: flex-end;
 }
 
 .menu-links li a {
-    padding: 15px 10px;
-    font-size: 17px;
+    padding: 0.9375rem 0.625rem;
+    font-size: 1.0625rem;
     width: 100%;
 }
 
@@ -287,56 +303,12 @@ header {
 header img {
     filter: drop-shadow(4px 4px 9px #000a);
     animation: shake 1s infinite paused;
+    -webkit-animation: shake 1s infinite paused;
 }
 
 header img:hover {
-   animation-play-state: running;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
 }
 
 .header-parent {
@@ -344,11 +316,11 @@ header img:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 3.125rem;
     text-align: center;
 }
 
-.header-parent > div {
+.header-parent>div {
     width: 100%;
 }
 
@@ -361,11 +333,11 @@ header img:hover {
 .header-parent h2 {
     font-family: var(--font-primary);
     color: var(--color-default);
-    font-size: 65px;
+    font-size: 4.0625rem;
 }
 
 .header-parent p {
-    margin-block: 20px;
+    margin-block: 1.25rem;
     line-height: 1.6;
     color: var(--color-tertiary-2);
 }
@@ -375,11 +347,11 @@ header img:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .btns a:first-child {
-    padding: 10px 25px;
+    padding: 0.625rem 1.5625rem;
     border-radius: 100vh;
 }
 
@@ -388,8 +360,12 @@ header img:hover {
     align-items: center;
     font-weight: 600;
     color: var(--color-default);
-    gap: 10px;
+    gap: 0.625rem;
     transition: color 400ms;
+    -webkit-transition: color 400ms;
+    -moz-transition: color 400ms;
+    -ms-transition: color 400ms;
+    -o-transition: color 400ms;
 }
 
 .btns a:nth-child(2):hover {
@@ -427,10 +403,10 @@ header img:hover {
 }
 
 .chefs-parent {
-    padding-block: 20px;
+    padding-block: 1.25rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .chefs-item {
@@ -439,8 +415,12 @@ header img:hover {
     width: 100%;
     overflow: hidden;
     position: relative;
-    transition: transform 400ms;
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 400ms;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -ms-transition: transform 400ms;
+    -o-transition: transform 400ms;
 }
 
 .chefs-item .picture {
@@ -457,11 +437,19 @@ header img:hover {
     width: 100%;
     height: 60px;
     transition: transform 400ms;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -ms-transition: transform 400ms;
+    -o-transition: transform 400ms;
 }
 
 .chefs-item:hover,
 .chefs-item:hover .picture::after {
     transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
 }
 
 :root:has(#mode:checked) .chefs-item .picture::after {
@@ -469,17 +457,17 @@ header img:hover {
 }
 
 .chefs-item .content {
-    padding: 10px 25px 25px;
+    padding: 0.625rem 1.5625rem 1.5625rem;
 }
 
 .chefs-item .content span {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--color-tertiary);
-    margin-block: 5px 10px;
+    margin-block: 0.3125rem 0.625rem;
 }
 
 .chefs-item .content p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-style: italic;
     color: var(--color-tertiary);
 }
@@ -490,21 +478,37 @@ header img:hover {
     right: 10px;
     background-color: #ffffff4d;
     width: fit-content;
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 5px;
     transform: translateX(60px);
+    -webkit-transform: translateX(60px);
+    -moz-transform: translateX(60px);
+    -ms-transform: translateX(60px);
+    -o-transform: translateX(60px);
     transition: transform 400ms 400ms;
+    -webkit-transition: transform 400ms 400ms;
+    -moz-transition: transform 400ms 400ms;
+    -ms-transition: transform 400ms 400ms;
+    -o-transition: transform 400ms 400ms;
 }
 
 .chefs-item:hover .social-media {
     transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
 }
 
 .chefs-item .social-media i {
-    font-size: 18px;
-    padding: 10px 5px;
+    font-size: 1.125rem;
+    padding: 0.625rem 0.3125rem;
     color: #37373f66;
     transition: color 200ms;
+    -webkit-transition: color 200ms;
+    -moz-transition: color 200ms;
+    -ms-transition: color 200ms;
+    -o-transition: color 200ms;
 }
 
 .chefs-item .social-media i:hover {
@@ -523,15 +527,19 @@ header img:hover {
     text-align: center;
     display: flex;
     flex-flow: column wrap;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
-.gallery-parent > div {
+.gallery-parent>div {
     width: 100%;
 }
 
 .gallery-parent img {
     transition: transform 400ms;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -ms-transition: transform 400ms;
+    -o-transition: transform 400ms;
 }
 
 .gallery-parent div:not(.layer) {
@@ -545,16 +553,20 @@ header img:hover {
     top: 100%;
     width: 100%;
     height: 100%;
-    padding: 15px;
+    padding: 0.9375rem;
     background-color: #00000096;
     z-index: 99;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
     justify-content: center;
     align-items: center;
     color: #fff;
     transition: top 400ms;
+    -webkit-transition: top 400ms;
+    -moz-transition: top 400ms;
+    -ms-transition: top 400ms;
+    -o-transition: top 400ms;
 }
 
 .gallery-parent div:not(.layer):hover .layer {
@@ -563,6 +575,10 @@ header img:hover {
 
 .gallery-parent div:not(.layer):hover img {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 
@@ -576,25 +592,25 @@ header img:hover {
 }
 
 .contact-parent .details {
-    margin-block: 25px;
+    margin-block: 1.5625rem;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
 }
 
-.contact-parent .details > div {
+.contact-parent .details>div {
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 1.5625rem;
     background-color: var(--background-light-item);
     width: 100%;
 }
 
-.contact-parent .details > div h3 {
+.contact-parent .details>div h3 {
     color: var(--color-detail);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .contact-parent .details .icon {
@@ -605,23 +621,23 @@ header img:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .contact-parent .details .icon i {
     color: var(--background-light);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .contact-parent form,
 .contact-parent form div {
     background-color: var(--background-light);
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 30px #00000014;
-    gap: 15px;
+    gap: 0.9375rem;
 }
 
 .contact-parent form div {
@@ -630,13 +646,17 @@ header img:hover {
 }
 
 .contact form :is(input, textarea) {
-    padding: 15px;
+    padding: 0.9375rem;
     font-family: inherit;
     line-height: 1.5;
     border: 2px solid var(--input-border);
     color: #212529;
-    transition: border-color 400ms;
     width: 100%;
+    transition: border-color 400ms;
+    -webkit-transition: border-color 400ms;
+    -moz-transition: border-color 400ms;
+    -ms-transition: border-color 400ms;
+    -o-transition: border-color 400ms;
 }
 
 .contact form textarea {
@@ -649,8 +669,8 @@ header img:hover {
 }
 
 .contact form button {
-    padding: 12px 40px;
-    margin-top: 25px;
+    padding: 0.75rem 2.5rem;
+    margin-top: 1.5625rem;
     border-radius: 100vh;
 }
 
@@ -668,17 +688,17 @@ footer {
 footer .footer-parent {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
-footer .footer-parent > div {
+footer .footer-parent>div {
     width: 100%;
 }
 
 footer .about div:first-child {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 footer .about img {
@@ -692,74 +712,82 @@ footer .logo::after {
 }
 
 footer .about p {
-    margin-block: 10px;
+    margin-block: 0.625rem;
 }
 
 footer .about h3 {
     text-align: center;
-    padding: 10px;
+    padding: 0.625rem;
     border-bottom: 2px solid #ddd6;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 footer .about .social-links {
-    padding: 10px;
+    padding: 0.625rem;
     display: flex;
     justify-content: space-around;
 }
 
 footer .about .social-links i {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 footer .subscription-contect p {
-    margin-block: 10px;
+    margin-block: 0.625rem;
 }
 
 footer .subscription-form {
-    margin-block: 20px;
+    margin-block: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 footer .subscription-form input {
     flex-grow: 1;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 footer .subscription-form button {
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 footer .quick-links ul {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
+    column-gap: 1.25rem;
 }
 
 footer .quick-links ul li {
-    width: calc(50% - 10px);
-    padding: 5px;
+    width: calc(50% - 0.625rem);
+    padding: 0.3125rem;
     transition: all 400ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
 }
 
 footer .quick-links ul li:hover {
     transform: translateX(10px);
     background-color: #222;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
 }
 
 footer .contact-details h3 {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 footer .quick-links ul li,
 footer .contact-details ul li {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 footer .contact-details ul li i {
@@ -769,7 +797,7 @@ footer .contact-details ul li i {
     justify-content: center;
     align-items: center;
     color: var(--color-primary);
-    font-size: 22px;
+    font-size: 1.375rem;
     cursor: pointer;
 }
 
